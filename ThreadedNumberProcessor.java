@@ -27,11 +27,13 @@ public class ThreadedNumberProcessor {
         // Start the threads
         thread1.start();
         thread2.start();
+        thread3.start();
 
         try {
             // Wait for both threads to finish execution
             thread1.join();
             thread2.join();
+            thread3.join();
         } catch (InterruptedException e) {
             System.err.println("Thread interrupted: " + e.getMessage());
         }
