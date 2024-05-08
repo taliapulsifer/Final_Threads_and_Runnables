@@ -22,6 +22,7 @@ public class ThreadedNumberProcessor {
 
         Thread thread1 = new Thread(squareRootCalculator);
         Thread thread2 = new Thread(squareCalculator);
+        Thread thread3 = new Thread(recipCalc);
 
         // Start the threads
         thread1.start();
