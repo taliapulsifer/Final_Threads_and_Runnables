@@ -14,6 +14,12 @@ public class ThreadedNumberProcessor {
             }
         };
 
+        Runnable recipCalc = () -> {
+            for (double number : numbers) {
+                System.out.println(" Reciprocal of " + number + " is " + (1/number));
+            }
+        };
+
         Thread thread1 = new Thread(squareRootCalculator);
         Thread thread2 = new Thread(squareCalculator);
 
